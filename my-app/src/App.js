@@ -1,10 +1,22 @@
 import './App.css';
-// import Menu from './menu'
+import SearchFilter from './SearchFilter';
+import Menu from './Menu'
 import TextArea from './TextArea';
+import {Route, BrowserRouter as Router} from 'react-router-dom';
 function App() {
   return (
     <>
-      <TextArea />
+    <Router>
+      <Menu/>
+      <Route path='/'>
+        <TextArea name= "Paras Kalyan"/>
+      </Route>
+      <Route path='/search'>
+        <SearchFilter />
+      </Route>
+     
+    </Router>
+      
     </>  
   );
 }
